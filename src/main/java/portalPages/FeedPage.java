@@ -28,6 +28,7 @@ public class FeedPage extends BasePage {
 
     @BeforeClass
     public FeedPage openLoginWindow() {
+        driver.get("https://frontend-qa.1worldonline.biz/#!/feed");
         waitUtils.waitVisibilityOfElementShort(signInRegButton);
         signInRegButton.click();
         return this;

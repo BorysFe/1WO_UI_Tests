@@ -10,14 +10,12 @@ import org.testng.annotations.BeforeMethod;
 @Getter
 public class DriverNew {
 
-    WaitUtils waitUtils;
-    public static WebDriver driver;
+    public WebDriver driver;
 
     @BeforeMethod
     public void webDriver() {
         System.setProperty("webdriver.chrome.driver", "D://chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://frontend-qa.1worldonline.biz/#!/feed");
     }
 
     @AfterMethod
@@ -26,9 +24,8 @@ public class DriverNew {
     }
 
     public DriverNew(WebDriver driver) {
-        DriverNew.driver = driver;
-        waitUtils = new WaitUtils(driver);
         PageFactory.initElements(driver, this);
+        this.driver = driver;
     }
 
     public WebDriver getDriver() {
