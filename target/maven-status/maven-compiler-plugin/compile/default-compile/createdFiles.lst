@@ -1,0 +1,5 @@
+portalPages\BasePage.class
+utils\DriverNew.class
+portalPages\enums\SignInUpLinks.class
+portalPages\FeedPage.class
+utils\WaitUtils.class
