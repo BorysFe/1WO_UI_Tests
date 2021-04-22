@@ -6,23 +6,23 @@ import org.testng.annotations.Test;
 import portalPages.FeedPage;
 import utils.DriverNew;
 
-public class SignUpTest extends DriverNew {
+public class SignUpTest {
 
     WebDriver driver;
     protected FeedPage feedPage;
     String login;
     String password;
 
-    public SignUpTest(WebDriver driver) {
-        super(driver);
-        feedPage = new FeedPage(getDriver());
-    }
+//    public SignUpTest(WebDriver driver) {
+//        super(driver);
+//        feedPage = new FeedPage(getDriver());
+//    }
 
     @BeforeMethod
     public void memberCreds() {
 //        System.setProperty("webdriver.chrome.driver", "D://chromedriver.exe");
 //        driver = new ChromeDriver();
-        driver.get("https://frontend-qa.1worldonline.biz/#!/feed");
+//        driver.get("https://frontend-qa.1worldonline.biz/#!/feed");
         login = "borys1wo@mailinator.com";
         password = "Qwerty123";
     }
